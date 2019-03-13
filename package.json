@@ -1,0 +1,24 @@
+{
+  "name": "justcode",
+  "version": "1.0.0",
+  "description": "talk is cheap show me code;",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DrugsZ/JustCode.git"
+  },
+  "author": "DrugsZ",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/DrugsZ/JustCode/issues"
+  },
+  "homepage": "https://github.com/DrugsZ/JustCode#readme",
+  "devDependencies": {
+    "eslint": "^5.15.1",
+    "eslint-config-airbnb-base": "^13.1.0",
+    "eslint-plugin-import": "^2.16.0"
+  }
+}
