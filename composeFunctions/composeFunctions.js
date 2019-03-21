@@ -19,12 +19,15 @@ const composeFunctions = (...cbs) => (...args) => {
   return result[0];
 };
 
-const compose = (...fns) => {
+const composeByFn = (...fns) => {
   fns.reverse();
   return fns.reduce((pre, next) => (...args) => pre(next(...args)));
 };
 
+const compose = (...fns) => (...args) => fns.reduce((result, fn) => [Reflect.apply(fn, null, result)], args)[0];
+
 export default {
   composeFunctions,
+  composeByFn,
   compose,
 };
