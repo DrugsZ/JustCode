@@ -19,6 +19,12 @@ const composeFunctions = (...cbs) => (...args) => {
   return result[0];
 };
 
+const compose = (...fns) => {
+  fns.reverse();
+  return fns.reduce((pre, next) => (...args) => pre(next(...args)));
+};
+
 export default {
   composeFunctions,
+  compose,
 };
